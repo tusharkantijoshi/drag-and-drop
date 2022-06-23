@@ -2,19 +2,59 @@
 <html lang="en">
 
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <link rel="stylesheet" href="style.css" />
-
-   <script src="script.js" defer></script>
    <title>Drag and Drop</title>
 </head>
 
 <body>
 
+   <!-- ! Modal -->
+   <div class="modal" id="form">
+      <div class="header">
+         <div class="title">Git add</div>
+         <button class="btn close-modal">&times;</button>
+      </div>
+      <div class="body">
+         <input type="text" id="input" maxlength="15" />
+         <span id="charCount">
+            <span id="remaining-chars">15</span>/15
+         </span>
+         <button type="submit" id="submit">Add</button>
+      </div>
+   </div>
 
+   <!-- ! Main Container -->
+   <div class="container">
 
+      <div class="status" id="noStatus">
+         <h1>Working Directory</h1>
+         <button id="addBtn" data-target-modal="#form">+ Add</button>
+
+         <!-- ! will be created by JS -->
+         <!-- <div class="todo" draggable="true">
+            Created Layout
+            <span class="close">&times;</span>
+         </div> -->
+
+      </div>
+
+      <div class="status">
+         <h1>Staging Area</h1>
+      </div>
+      <div class="status">
+         <h1>Local Repository</h1>
+      </div>
+      <div class="status">
+         <h1>Cloud Repository</h1>
+      </div>
+   </div>
+
+   <!-- ! overlay -->
+   <div id="overlay"></div>
+
+   <script src="script.js"></script>
 </body>
 
 </html>
