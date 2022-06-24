@@ -66,7 +66,7 @@ body {
   background-color: #aaa;
 }
 
-.todo {
+.items {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -83,7 +83,7 @@ body {
   margin: 0.5rem 0;
 }
 
-.todo .close {
+.items .close {
   position: absolute;
   right: 1rem;
   top: 0rem;
@@ -155,8 +155,12 @@ body {
   padding: 0.5rem 1rem;
   width: 100%;
   margin: 0.25rem;
-  border-radius: 10px;
+  border-radius: 5px;
   outline: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 #charCount {
